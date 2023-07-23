@@ -6,24 +6,32 @@ body {
 }
 
 header {
+  min-height: 10vh;
   grid-column: 1/13;
   grid-row: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 main {
+  min-height: 80vh;
   grid-column: 1/13;
   grid-row: 2;
 }
 
-div {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
+main > div {
+  display: grid;
+  gap: 16px;
 }
 
 footer {
+  min-height: 10vh;
   grid-column: 1/13;
   grid-row: 3;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 h1, h2, h3 {
@@ -31,6 +39,8 @@ h1, h2, h3 {
 }
 
 .skills-layout {
+  display: flex;
+  justify-content: space-around;
   flex-direction: row;
 }
 
