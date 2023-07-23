@@ -15,7 +15,21 @@ main {
     grid-row: 2;
 }
 
+div {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
 footer {
     grid-column: 1 / 13;
     grid-row: 3;
+}
+
+h1, h2, h3 {
+    text-align: center;
+}
+
+.skills-layout {
+    flex-direction: row;
 }
