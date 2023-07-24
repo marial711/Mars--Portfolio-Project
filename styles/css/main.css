@@ -98,4 +98,76 @@ h1, h2, h3 {
   max-width: 100px;
 }
 
+.the-game {
+  position: relative;
+}
+.the-game div {
+  position: absolute;
+  border: 1px solid black;
+}
+
+.ground {
+  bottom: 200px;
+  width: 200px;
+}
+
+.stick {
+  height: 250px;
+  bottom: 200px;
+  left: 400px;
+}
+
+.hanger {
+  top: 46px;
+  right: 198px;
+  width: 100px;
+}
+
+.rope {
+  height: 35px;
+  top: 46px;
+}
+
+.head {
+  z-index: 2;
+  top: 80px;
+  width: 40px;
+  height: 40px;
+  border-radius: 100%;
+  background-color: white;
+}
+
+.body {
+  top: 100px;
+  height: 100px;
+}
+
+.lArm {
+  height: 40px;
+  top: 130px;
+  right: 285px;
+  transform: rotate(135deg);
+}
+
+.rArm {
+  height: 40px;
+  top: 130px;
+  left: 285px;
+  transform: rotate(45deg);
+}
+
+.rFoot {
+  height: 30px;
+  top: 195px;
+  left: 288px;
+  transform: rotate(45deg);
+}
+
+.lFoot {
+  height: 30px;
+  top: 195px;
+  right: 288px;
+  transform: rotate(135deg);
+}
+
 /*# sourceMappingURL=main.css.map */
