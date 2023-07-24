@@ -1,6 +1,19 @@
 .the-game {
-    position: relative;
+    border: 5px solid grey;
+}
+.the-man { 
+    background-color: seashell;
+    height: 350px;
+    width: 600px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
 
+    @media screen and (max-width: 650px ) {
+       width: 400px;
+
+    }
+    position: relative;
     div {
         position: absolute;
         border: 1px solid black;
@@ -8,13 +21,13 @@
 }
 
 .ground {
-    bottom: 200px;
+    bottom: 50px;
     width: 200px;
 }
 
 .stick {
     height: 250px;
-    bottom: 200px;
+    bottom: 50px;
     left: 400px;
 }
 
@@ -66,4 +79,21 @@
     top: 195px;
     right: 288px;
     transform: rotate(135deg);
+}
+
+.keyboard {
+    font-size: 1.5rem;
+    text-transform: capitalize;
+
+    div > div {
+        background-color: white;
+        height: 20px;
+        width: 20px;
+        border: 1px solid black;
+        padding: 0.5rem; 
+        &:hover {
+            cursor: pointer;
+            box-shadow: 2px 2px 2px black;
+        }
+    }
 }
