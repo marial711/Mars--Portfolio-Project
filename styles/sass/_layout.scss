@@ -18,6 +18,10 @@ main {
     min-height:80vh;
     grid-column: 1 / 13;
     grid-row: 2;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
 main > div {
@@ -39,14 +43,56 @@ h1, h2, h3 {
     text-align: center;
 }
 
-.skills-layout {
+.skills {
+    width: 100vw;
     display: flex;
     justify-content: space-around;
-    flex-direction: row;
-}
 
-// .game-layout {
-//     display: flex;
-//     justify-content: space-around;
-//     align-items: center;
-// }
+    @media screen and (max-width: 650px ) {
+        width: 80vw;
+     }
+}
+.game-center {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+
+}
+.game-layout {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    width: 600px;
+    padding: 16px;
+
+    section {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        gap: 20px;
+
+    }
+    @media screen and (max-width: 650px ) {
+        width: 400px;
+     }
+
+}
+.the-game {
+    border: 2px solid black;
+    height: 500px;
+    width: 600px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+
+    @media screen and (max-width: 650px ) {
+       width: 400px;
+
+    }
+}
+.button {
+    max-width: 100px;
+}
