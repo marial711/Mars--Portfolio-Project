@@ -13,14 +13,28 @@ li {
   font-size: 1.25rem;
 }
 
+.button {
+  border: none;
+  border-radius: 2rem;
+  box-shadow: 2px 2px 2px black;
+  color: grey;
+  font-size: 1.75rem;
+  font-weight: 700;
+}
+.button:active {
+  box-shadow: none;
+}
+
 body {
   display: grid;
   grid-template-columns: repeat(12, 1fr);
   gap: 16px;
   margin: 0 32px;
+  background-color: linen;
 }
 
 header {
+  background-color: white;
   min-height: 10vh;
   grid-column: 1/13;
   grid-row: 1;
@@ -30,6 +44,7 @@ header {
 }
 
 main {
+  background-color: white;
   min-height: 80vh;
   grid-column: 1/13;
   grid-row: 2;
@@ -45,6 +60,7 @@ main > div {
 }
 
 footer {
+  background-color: white;
   min-height: 10vh;
   grid-column: 1/13;
   grid-row: 3;
@@ -57,13 +73,26 @@ h1, h2, h3 {
   text-align: center;
 }
 
+.skills-layout {
+  min-height: 30vh;
+  width: 100%;
+}
+
 .skills {
-  width: 100vw;
   display: flex;
   justify-content: space-around;
 }
+.skills ul {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
+  gap: 0.75rem;
+}
 @media screen and (max-width: 650px) {
   .skills {
+    flex-direction: column;
+    gap: 3rem;
     width: 80vw;
   }
 }
@@ -85,10 +114,13 @@ h1, h2, h3 {
   padding: 16px;
 }
 .game-layout section {
+  width: 100%;
+  height: 10vh;
   display: flex;
   flex-direction: column;
-  justify-content: space-around;
-  gap: 20px;
+  align-items: center;
+  justify-content: center;
+  gap: 50px;
 }
 @media screen and (max-width: 650px) {
   .game-layout {
@@ -116,15 +148,17 @@ h1, h2, h3 {
 }
 
 .button {
-  max-width: 100px;
+  width: 250px;
+  padding: 0.5rem;
 }
 
 .the-game {
+  display: none;
   border: 5px solid grey;
 }
 
 .the-man {
-  background-color: seashell;
+  background-color: rgb(234, 230, 227);
   height: 350px;
   width: 600px;
   display: flex;
@@ -169,9 +203,8 @@ h1, h2, h3 {
   top: 80px;
   width: 40px;
   height: 40px;
-  border: 2px solid;
   border-radius: 100%;
-  background-color: seashell;
+  background-color: rgb(234, 230, 227);
 }
 
 .body {

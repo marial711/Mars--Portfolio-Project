@@ -3,9 +3,11 @@ body {
     grid-template-columns: repeat(12, 1fr);
     gap: 16px;
     margin: 0 32px;
+    background-color: linen;
 }
 
 header {
+    background-color: white;
     min-height: 10vh;
     grid-column: 1 / 13;
     grid-row: 1;
@@ -15,6 +17,7 @@ header {
 }
 
 main {
+    background-color: white;
     min-height:80vh;
     grid-column: 1 / 13;
     grid-row: 2;
@@ -30,6 +33,7 @@ main > div {
 }
 
 footer {
+    background-color: white;
     min-height: 10vh;
     grid-column: 1 / 13;
     grid-row: 3;
@@ -43,12 +47,26 @@ h1, h2, h3 {
     text-align: center;
 }
 
+.skills-layout {
+    min-height: 30vh;
+    width: 100%;
+}
+
 .skills {
-    width: 100vw;
     display: flex;
     justify-content: space-around;
 
+    ul {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-around;
+        gap: 0.75rem;
+
+    }
     @media screen and (max-width: 650px ) {
+        flex-direction: column;
+        gap: 3rem;
         width: 80vw;
      }
 }
@@ -69,12 +87,15 @@ h1, h2, h3 {
     padding: 16px;
 
     section {
+        width: 100%;
+        height: 10vh;
         display: flex;
         flex-direction: column;
-        justify-content: space-around;
-        gap: 20px;
-
+        align-items: center;
+        justify-content: center;
+        gap: 50px;
     }
+
     @media screen and (max-width: 650px ) {
         width: 400px;
      }
@@ -102,5 +123,6 @@ h1, h2, h3 {
 }
 
 .button {
-    max-width: 100px;
+    width: 250px;
+    padding: 0.5rem;
 }
