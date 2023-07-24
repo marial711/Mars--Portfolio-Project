@@ -1,1 +1,19 @@
 // This file includes variables, mixins, and utility classes needed for my project
+body {
+    font: {
+        family: 'Work Sans', sans-serif;
+        size: 1rem;
+    }
+}
+
+h1,h2,h3,h4 {
+    font: {
+        size: 2.5rem;
+        family: 'Signika Negative', sans-serif;
+        weight: 600;
+    }
+}
+
+li {
+    font-size: 1.25rem;
+}
