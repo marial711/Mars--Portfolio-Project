@@ -23,4 +23,11 @@ function pickWord() {
 }
 
 let word = pickWord();
-console.log(word);
+console.log(word);    const fullGame = document.getElementById(`theGame`);
+    const gameHeading = document.getElementById(`gameHeader`);
+   
+    fullGame.style.display = `block`;
+    playButton.style.display = `none`;
+    gameHeading.innerHTML = `Guess A Letter!`;
+    // alert(`Let the games begin`);
+    displayUnderlines();
