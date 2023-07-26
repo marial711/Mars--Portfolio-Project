@@ -126,3 +126,13 @@ h1, h2, h3 {
     width: 250px;
     padding: 0.5rem;
 }
+
+.underlines {
+    display: flex;
+    justify-content: space-evenly;
+    p{
+        color: transparent;
+        width: 50px;
+        border-bottom: solid thick black;
+    }
+}

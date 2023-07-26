@@ -32,3 +32,17 @@ li {
         box-shadow: none;
     }
 }
+
+.display-word {
+    border: solid 1px black;
+    text-align: center;
+    padding: 1rem;
+    
+    font: {
+        family: 'Signika Negative', sans-serif;
+        size: 2.5rem;
+        weight: 800;
+    };
+    
+    text-transform: uppercase;
+}

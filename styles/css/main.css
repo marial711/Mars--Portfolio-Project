@@ -17,12 +17,21 @@ li {
   border: none;
   border-radius: 2rem;
   box-shadow: 2px 2px 2px black;
-  color: grey;
   font-size: 1.75rem;
   font-weight: 700;
 }
 .button:active {
   box-shadow: none;
+}
+
+.display-word {
+  border: solid 1px black;
+  text-align: center;
+  padding: 1rem;
+  font-family: "Signika Negative", sans-serif;
+  font-size: 2.5rem;
+  font-weight: 800;
+  text-transform: uppercase;
 }
 
 body {
@@ -152,6 +161,16 @@ h1, h2, h3 {
   padding: 0.5rem;
 }
 
+.underlines {
+  display: flex;
+  justify-content: space-evenly;
+}
+.underlines p {
+  color: transparent;
+  width: 50px;
+  border-bottom: solid thick black;
+}
+
 .the-game {
   display: none;
   border: 5px solid grey;
@@ -177,28 +196,33 @@ h1, h2, h3 {
 }
 
 .ground {
+  display: none;
   bottom: 50px;
   width: 200px;
 }
 
 .stick {
+  display: none;
   height: 250px;
   bottom: 50px;
   left: 400px;
 }
 
 .hanger {
+  display: none;
   top: 46px;
   right: 198px;
   width: 100px;
 }
 
 .rope {
+  display: none;
   height: 35px;
   top: 46px;
 }
 
 .head {
+  display: none;
   z-index: 2;
   top: 80px;
   width: 40px;
@@ -208,11 +232,13 @@ h1, h2, h3 {
 }
 
 .body {
+  display: none;
   top: 100px;
   height: 100px;
 }
 
 .lArm {
+  display: none;
   height: 40px;
   top: 130px;
   right: 285px;
@@ -220,6 +246,7 @@ h1, h2, h3 {
 }
 
 .rArm {
+  display: none;
   height: 40px;
   top: 130px;
   left: 285px;
@@ -227,6 +254,7 @@ h1, h2, h3 {
 }
 
 .rFoot {
+  display: none;
   height: 30px;
   top: 195px;
   left: 288px;
@@ -234,6 +262,7 @@ h1, h2, h3 {
 }
 
 .lFoot {
+  display: none;
   height: 30px;
   top: 195px;
   right: 288px;
@@ -250,10 +279,12 @@ h1, h2, h3 {
   width: 20px;
   border: 1px solid black;
   padding: 0.5rem;
+  box-shadow: 2px 2px 2px black;
 }
 .keyboard div > div:hover {
   cursor: pointer;
-  box-shadow: 2px 2px 2px black;
+  background-color: antiquewhite;
+  box-shadow: none;
 }
 
 /*# sourceMappingURL=main.css.map */
