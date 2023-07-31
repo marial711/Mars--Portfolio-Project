@@ -24,10 +24,23 @@ let alphabet = {
     W : document.getElementById(`w`),
     X : document.getElementById(`x`),
     Y : document.getElementById(`y`),
-    Z : document.getElementById(`z`)
+    Z : document.getElementById(`z`),
+};
+let hangman = {
+    ground : document.getElementsByClassName(`ground`),
+    stick : document.getElementsByClassName(`stick`),
+    hanger : document.getElementsByClassName(`hanger`),
+    rope : document.getElementsByClassName(`rope`),
+    body : document.getElementsByClassName(`body`),
+    lArm : document.getElementsByClassName(`lArm`),
+    rArm : document.getElementsByClassName(`rArm`),
+    lFoot : document.getElementsByClassName(`lFoot`),
+    rFoot : document.getElementsByClassName(`rFoot`)
 };
 let incorrectGuesses = [];
 let correctGuesses = [];
+let wrongAnswerTally = 0;
+
 
 function pickWord() {
     let wordChoice = [
@@ -51,6 +64,44 @@ function displayUnderlines() {
     }        
 }
 
+function displayTheMan() {
+    switch(wrongAnswerTally) {
+        case 1:
+            document.querySelector(`div.ground`).style.display = `block`;
+            break;
+        case 2:
+            document.querySelector(`div.stick`).style.display = `block`;
+            break;
+        case 3 :
+            document.querySelector(`div.hanger`).style.display = `block`;
+            break;
+        case 4:
+            document.querySelector(`div.rope`).style.display = `block`;
+            break;
+        case 5:
+            document.querySelector(`div.head`).style.display = `block`;
+            break;
+        case 6:
+            document.querySelector(`div.body`).style.display = `block`;
+            break;
+        case 7:            
+            document.querySelector(`div.lArm`).style.display = `block`;
+            break;
+        case 8:
+            document.querySelector(`div.rArm`).style.display = `block`;
+            break;
+        case 9:
+            document.querySelector(`div.lFoot`).style.display = `block`;
+            break;
+        case 10:
+            document.querySelector(`div.rFoot`).style.display = `block`;
+            console.log(`Wrong, Game Over!`);
+            break;
+        default: 
+            console.log(`Guess a letter`);
+    }
+}
+
 function clickedLetter() {
     for (let letter in alphabet) {
         alphabet[letter].addEventListener(`click`, function () {
@@ -72,18 +123,24 @@ function clickedLetter() {
                 }
                 
                 if(!selectedWord.includes(pickedLetter) 
-                && !incorrectGuesses.includes(pickedLetter)){
+                    && !incorrectGuesses.includes(pickedLetter)){
                     incorrectGuesses.push(pickedLetter);
                     alphabet[letter].style.color = `white`; 
                     alphabet[letter].style.backgroundColor = `grey`; 
                     alphabet[letter].style.boxShadow = `none`;
+                    alphabet[letter].style.cursor = `auto`;
                     document.getElementById(`wrongLetters`)
                         .innerHTML= incorrectGuesses.toString();
+
+                    wrongAnswerTally++;
+                    displayTheMan();
+
                 }
             } 
         }); 
     }
 }
+
 
 playButton.addEventListener(`click`, function () {
     const fullGame = document.getElementById(`theGame`);
@@ -94,6 +151,5 @@ playButton.addEventListener(`click`, function () {
     gameHeading.innerHTML = `Guess A Letter!`;
     displayUnderlines();
     clickedLetter();
-   
 });
 

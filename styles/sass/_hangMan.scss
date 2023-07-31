@@ -3,17 +3,10 @@
     border: 5px solid grey;
 }
 .the-man { 
-    background-color: rgb(234, 230, 227);
     height: 350px;
-    width: 600px;
-    display: flex;
     justify-content: space-around;
     align-items: center;
 
-    @media screen and (max-width: 650px ) {
-       width: 400px;
-
-    }
     position: relative;
     div {
         position: absolute;
@@ -25,19 +18,20 @@
     display: none;
     bottom: 50px;
     width: 200px;
+    right: 250px;
 }
 
 .stick {
     display: none;
     height: 250px;
     bottom: 50px;
-    left: 400px;
+    right: 250px;
 }
 
 .hanger {
     display: none;
     top: 46px; 
-    right: 198px;
+    right: 250px;
     width: 100px;
 }
 
@@ -45,21 +39,24 @@
     display: none;
     height: 35px;
     top: 46px;
+    right: 350px;
 }
 
 .head {
     display: none;
     z-index: 2;
     top: 80px;
+    right: 330px;
     width: 40px;
     height: 40px;
     border-radius: 100%;
-    background-color: rgb(234, 230, 227);
+    background-color: white;
 }
 
 .body {
     display: none;
     top: 100px;
+    right: 350px;
     height: 100px;
 }
 
@@ -67,28 +64,28 @@
     display: none;
     height: 40px;
     top: 130px;
-    right: 285px;
+    right: 335px;
     transform: rotate(135deg);
 }
 .rArm {
     display: none;
     height: 40px;
     top: 130px;
-    left: 285px;
+    left: 344px;
     transform: rotate(45deg);
 }
 .rFoot {
     display: none;
     height: 30px;
-    top: 195px;
-    left: 288px;
+    top: 194px;
+    left: 350px;
     transform: rotate(45deg);
 }
 .lFoot {
     display: none;
     height: 30px;
     top: 195px;
-    right: 288px;
+    right: 338px;
     transform: rotate(135deg);
 }
 
@@ -98,9 +95,10 @@
 
     div > div {
         background-color: white;
-        height: 20px;
-        width: 20px;
+        height: 25px;
+        width: 50px;
         border: 1px solid black;
+        border-radius: 5px;
         padding: 0.5rem; 
         box-shadow: 2px 2px 2px black;
         &:hover {
@@ -109,5 +107,9 @@
             box-shadow: none;
         }
     }
+}
+
+.wrong-letters {
+   font-size: 1.25rem;;
 }
 

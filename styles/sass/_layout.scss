@@ -85,7 +85,6 @@ h1, h2, h3 {
     justify-content: center;
     align-items: center;
     gap: 20px;
-    width: 600px;
     padding: 16px;
 
     section {
@@ -121,7 +120,6 @@ h1, h2, h3 {
         display: flex;
         justify-content: space-around;
         gap: 3rem;
-       
     }
 }
 
@@ -144,5 +142,6 @@ h1, h2, h3 {
 .wrong-letters {
     display: flex;
     justify-content: center;
-    letter-spacing: 1rem;
+    letter-spacing: 10px;
+    padding: 1rem;
 }
