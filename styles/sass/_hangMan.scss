@@ -1,16 +1,15 @@
 .the-game {
     display: none;
-    border: 5px solid grey;
+    border: 5px solid $tertiary-color;
 }
 .the-man { 
     height: 350px;
     justify-content: space-around;
     align-items: center;
-
     position: relative;
     div {
         position: absolute;
-        border: 1px solid black;
+        border: 1px solid $secondary-color;
     }
 }
 

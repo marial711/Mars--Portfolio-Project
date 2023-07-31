@@ -1,7 +1,6 @@
 body {
     display: grid;
     grid-template-columns: repeat(12, 1fr);
-    gap: 16px;
     margin: 0 32px;
 }
 
@@ -47,9 +46,14 @@ h1, h2, h3 {
     text-align: center;
 }
 
+.about-section {
+    padding: 2rem 0;
+}
+
 .skills-section {
     min-height: 30vh;
     width: 100%;
+    padding: 1rem 0;
 }
 
 .skills-list {

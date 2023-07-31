@@ -1,3 +1,6 @@
+let incorrectGuesses = [];
+let correctGuesses = [];
+let wrongAnswerTally = 0;
 let alphabet = {
     A : document.getElementById(`a`),
     B : document.getElementById(`b`),
@@ -26,21 +29,6 @@ let alphabet = {
     Y : document.getElementById(`y`),
     Z : document.getElementById(`z`),
 };
-let hangman = {
-    ground : document.getElementsByClassName(`ground`),
-    stick : document.getElementsByClassName(`stick`),
-    hanger : document.getElementsByClassName(`hanger`),
-    rope : document.getElementsByClassName(`rope`),
-    body : document.getElementsByClassName(`body`),
-    lArm : document.getElementsByClassName(`lArm`),
-    rArm : document.getElementsByClassName(`rArm`),
-    lFoot : document.getElementsByClassName(`lFoot`),
-    rFoot : document.getElementsByClassName(`rFoot`)
-};
-let incorrectGuesses = [];
-let correctGuesses = [];
-let wrongAnswerTally = 0;
-
 
 function pickWord() {
     let wordChoice = [
@@ -141,15 +129,26 @@ function clickedLetter() {
     }
 }
 
+function resetGame() {
+    incorrectGuesses = [];
+    correctGuesses = [];
+    wrongAnswerTally = 0;
+    selectedWord = pickWord();
+}
 
 playButton.addEventListener(`click`, function () {
     const fullGame = document.getElementById(`theGame`);
     const gameHeading = document.getElementById(`gameHeader`);
+    const reset = document.getElementById(`reset`);
 
     fullGame.style.display = `block`;
     playButton.style.display = `none`;
     gameHeading.innerHTML = `Guess A Letter!`;
     displayUnderlines();
     clickedLetter();
+
+    reset.addEventListener(`click`, function () {
+        resetGame();
+    });
 });
 

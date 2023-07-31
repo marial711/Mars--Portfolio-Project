@@ -1,5 +1,6 @@
 // This file includes variables, mixins, and utility classes needed for my project
-body {
+body {    
+    background-color: $primary-color;
     font: {
         family: 'Work Sans', sans-serif;
         size: 1rem;
@@ -7,6 +8,7 @@ body {
 }
 
 h1,h2,h3,h4 {
+    color: $tertiary-color;
     font: {
         size: 2.5rem;
         family: 'Signika Negative', sans-serif;
@@ -20,6 +22,7 @@ li {
 }
 
 .about-section {
+    border-bottom: solid 2px $primary-color;
     font: {
         size: 1.25rem;
         weight: 200;
@@ -28,7 +31,12 @@ li {
     line-height: 1.5;
 }
 
+.skills-section {
+    border-bottom: solid 2px $primary-color;
+}
+
 .skills-list {
+
     font: {
         size: 1.25rem;
         weight: 200;
@@ -42,6 +50,7 @@ li {
 }
 
 .button {
+    background-color: $primary-color;
     border: none;
     border-radius: 2rem;
     box-shadow: 2px 2px 2px black;

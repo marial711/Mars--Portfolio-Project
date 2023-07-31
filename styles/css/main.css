@@ -1,9 +1,11 @@
 body {
+  background-color: #DCE0FE;
   font-family: "Work Sans", sans-serif;
   font-size: 1rem;
 }
 
 h1, h2, h3, h4 {
+  color: #A09DAF;
   font-size: 2.5rem;
   font-family: "Signika Negative", sans-serif;
   font-weight: 600;
@@ -14,10 +16,15 @@ li {
 }
 
 .about-section {
+  border-bottom: solid 2px #DCE0FE;
   font-size: 1.25rem;
   font-weight: 200;
   word-spacing: 4px;
   line-height: 1.5;
+}
+
+.skills-section {
+  border-bottom: solid 2px #DCE0FE;
 }
 
 .skills-list {
@@ -31,6 +38,7 @@ li {
 }
 
 .button {
+  background-color: #DCE0FE;
   border: none;
   border-radius: 2rem;
   box-shadow: 2px 2px 2px black;
@@ -53,7 +61,6 @@ li {
 body {
   display: grid;
   grid-template-columns: repeat(12, 1fr);
-  gap: 16px;
   margin: 0 32px;
 }
 
@@ -98,9 +105,14 @@ h1, h2, h3 {
   text-align: center;
 }
 
+.about-section {
+  padding: 2rem 0;
+}
+
 .skills-section {
   min-height: 30vh;
   width: 100%;
+  padding: 1rem 0;
 }
 
 .skills-list {
@@ -195,7 +207,7 @@ h1, h2, h3 {
 
 .the-game {
   display: none;
-  border: 5px solid grey;
+  border: 5px solid #A09DAF;
 }
 
 .the-man {
@@ -206,7 +218,7 @@ h1, h2, h3 {
 }
 .the-man div {
   position: absolute;
-  border: 1px solid black;
+  border: 1px solid #AF9DA3;
 }
 
 .ground {
