@@ -3,7 +3,6 @@ body {
     grid-template-columns: repeat(12, 1fr);
     gap: 16px;
     margin: 0 32px;
-    background-color: linen;
 }
 
 header {
@@ -25,6 +24,7 @@ main {
     display: flex;
     flex-direction: column;
     align-items: center;
+    padding: 2rem;
 }
 
 main > div {
@@ -47,12 +47,12 @@ h1, h2, h3 {
     text-align: center;
 }
 
-.skills-layout {
+.skills-section {
     min-height: 30vh;
     width: 100%;
 }
 
-.skills {
+.skills-list {
     display: flex;
     justify-content: space-around;
 
@@ -70,6 +70,7 @@ h1, h2, h3 {
         width: 80vw;
      }
 }
+
 .game-center {
     display: flex;
     flex-direction: column;
@@ -77,7 +78,8 @@ h1, h2, h3 {
     align-items: center;
 
 }
-.game-layout {
+
+.game-section {
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -101,6 +103,7 @@ h1, h2, h3 {
      }
 
 }
+
 .the-game {
     display: flex;
     flex-direction: column;
@@ -130,9 +133,16 @@ h1, h2, h3 {
 .underlines {
     display: flex;
     justify-content: space-evenly;
-    p{
+    
+    p {
         color: transparent;
         width: 50px;
-        border-bottom: solid thick black;
+        border-bottom: solid medium black;
     }
+}
+
+.wrong-letters {
+    display: flex;
+    justify-content: center;
+    letter-spacing: 1rem;
 }

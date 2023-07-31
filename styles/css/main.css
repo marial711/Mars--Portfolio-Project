@@ -13,6 +13,23 @@ li {
   font-size: 1.25rem;
 }
 
+.about-section {
+  font-size: 1.25rem;
+  font-weight: 200;
+  word-spacing: 4px;
+  line-height: 1.5;
+}
+
+.skills-list {
+  font-size: 1.25rem;
+  font-weight: 200;
+  word-spacing: 4px;
+  line-height: 1;
+}
+.skills-list details > ul {
+  padding-top: 1rem;
+}
+
 .button {
   border: none;
   border-radius: 2rem;
@@ -25,7 +42,6 @@ li {
 }
 
 .display-word {
-  border: solid 1px black;
   text-align: center;
   padding: 1rem;
   font-family: "Signika Negative", sans-serif;
@@ -39,7 +55,6 @@ body {
   grid-template-columns: repeat(12, 1fr);
   gap: 16px;
   margin: 0 32px;
-  background-color: linen;
 }
 
 header {
@@ -61,6 +76,7 @@ main {
   display: flex;
   flex-direction: column;
   align-items: center;
+  padding: 2rem;
 }
 
 main > div {
@@ -82,16 +98,16 @@ h1, h2, h3 {
   text-align: center;
 }
 
-.skills-layout {
+.skills-section {
   min-height: 30vh;
   width: 100%;
 }
 
-.skills {
+.skills-list {
   display: flex;
   justify-content: space-around;
 }
-.skills ul {
+.skills-list ul {
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -99,7 +115,7 @@ h1, h2, h3 {
   gap: 0.75rem;
 }
 @media screen and (max-width: 650px) {
-  .skills {
+  .skills-list {
     flex-direction: column;
     gap: 3rem;
     width: 80vw;
@@ -113,7 +129,7 @@ h1, h2, h3 {
   align-items: center;
 }
 
-.game-layout {
+.game-section {
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -122,7 +138,7 @@ h1, h2, h3 {
   width: 600px;
   padding: 16px;
 }
-.game-layout section {
+.game-section section {
   width: 100%;
   height: 10vh;
   display: flex;
@@ -132,7 +148,7 @@ h1, h2, h3 {
   gap: 50px;
 }
 @media screen and (max-width: 650px) {
-  .game-layout {
+  .game-section {
     width: 400px;
   }
 }
@@ -168,7 +184,13 @@ h1, h2, h3 {
 .underlines p {
   color: transparent;
   width: 50px;
-  border-bottom: solid thick black;
+  border-bottom: solid medium black;
+}
+
+.wrong-letters {
+  display: flex;
+  justify-content: center;
+  letter-spacing: 1rem;
 }
 
 .the-game {

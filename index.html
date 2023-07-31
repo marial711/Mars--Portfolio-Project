@@ -11,14 +11,14 @@
     <title>Mars Portfolio Project</title>
 </head>
 <body>
-    <header class="">
+    <header>
         <!-- Include a Banner Image here -->
-        <h1 class="">Mars Leyva</h1>
+        <h1>Mars Leyva</h1>
     </header>
     </header>
 
-    <main class="">
-        <div class="">
+    <main>
+        <div class="about-section">
             <h2 class="">About</h2>
             <!-- Include About Excerpt -->
             <p>
@@ -29,10 +29,10 @@
             </p>
         </div>
 
-        <div class="skills-layout">
+        <div class="skills-section">
             <h2 class="">Skills</h2>
             <div>
-                <section class="skills">
+                <section class="skills-list">
                     <ul>
                         <h3 class="">Programming</h3>
                         <li>HTML</li>
@@ -72,7 +72,8 @@
             </div>
         </div>
 
-        <div class="game-layout">
+        <div class="game-section">
+            <div>
             <section>
                 <h2 id="gameHeader">Ready to Start</h2>
                 <button id="playButton" class="button">Click to Play</button>
@@ -92,48 +93,59 @@
                     <div class="rFoot"></div>
                 </div>
 
+                <div>
+                    <div id="displayWord" class="display-word">
+                    <div id="underlines" class="underlines"></div>
+                </div>
+
+               
+
                 <div class="keyboard">
                     <div>
-                        <div>a</div>
-                        <div>b</div>
-                        <div>c</div>
-                        <div>d</div>
-                        <div>e</div>
+                        <div value="A" id="a">a</div>
+                        <div value="B" id="b">b</div>
+                        <div value="C" id="c">c</div>
+                        <div value="D" id="d">d</div>
+                        <div value="E" id="e">e</div>
                     </div>
                     <div>
-                        <div>f</div>
-                        <div>g</div>
-                        <div>h</div>
-                        <div>i</div>
-                        <div>j</div>
-                        <div>k</div>
+                        <div value="F" id="f">f</div>
+                        <div value="G" id="g">g</div>
+                        <div value="H" id="h">h</div>
+                        <div value="I" id="i">i</div>
+                        <div value="J" id="j">j</div>
+                        <div value="K" id="k">k</div>
                     </div>
                     <div>
-                        <div>l</div>
-                        <div>m</div>
-                        <div>n</div>
-                        <div>o</div>
-                        <div>p</div>
+                        <div value="L" id="l">l</div>
+                        <div value="M" id="m">m</div>
+                        <div value="N" id="n">n</div>
+                        <div value="O" id="o">o</div>
+                        <div value="P" id="p">p</div>
                     </div>
                     <div>
-                        <div>q</div>
-                        <div>r</div>
-                        <div>s</div>
-                        <div>t</div>
-                        <div>u</div>
-                        <div>v</div>
+                        <div value="Q" id="q">q</div>
+                        <div value="R" id="r">r</div>
+                        <div value="S" id="s">s</div>
+                        <div value="T" id="t">t</div>
+                        <div value="U" id="u">u</div>
+                        <div value="V" id="v">v</div>
                     </div>
                     <div>
-                        <div>w</div>
-                        <div>x</div>
-                        <div>y</div>
-                        <div>z</div>
+                        <div value="W" id="w">w</div>
+                        <div value="X" id="x">x</div>
+                        <div value="Y" id="y">y</div>
+                        <div value="Z" id="z">z</div>
                     </div>
                 </div>
             </div>
         </div>
+        <div id="wrongLetters" class="wrong-letters">
+            
+        </div>
+        </div>
     </main>
-    <footer class="">
+    <footer>
         <small>© Copyright 2023 Mars Leyva</small>
     </footer>
     <script src="scripts/main.js"></script>
