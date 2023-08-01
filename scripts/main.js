@@ -1,3 +1,12 @@
+let wordChoice = {
+    randomWords : [ 
+        `html`, `april`,  `peru`,`cuba`, `pastry`, `sbux`, `paint`
+    ],
+    pickWord: function () {
+        let wordArray = this.randomWords;
+        let randomChoice = Math.floor( Math.random() * wordArray.length);
+        return wordArray[randomChoice];
+    }};
 let incorrectGuesses = [];
 let correctGuesses = [];
 let wrongAnswerTally = 0;
@@ -27,19 +36,9 @@ let alphabet = {
     W : document.getElementById(`w`),
     X : document.getElementById(`x`),
     Y : document.getElementById(`y`),
-    Z : document.getElementById(`z`),
-};
+    Z : document.getElementById(`z`),};
 
-function pickWord() {
-    let wordChoice = [
-        `html`, `april`,  `peru`,
-        `cuba`, `pastry`, `sbux`, `paint`
-    ];
-    let randomChoice = Math.floor( Math.random() * wordChoice.length);
-    return wordChoice[randomChoice];
-}
-
-let selectedWord = pickWord();
+let selectedWord = wordChoice.pickWord();
 const playButton = document.getElementById(`playButton`);
 
 function displayUnderlines() {
@@ -54,6 +53,18 @@ function displayUnderlines() {
 
 function displayTheMan() {
     switch(wrongAnswerTally) {
+        case 0: 
+            document.querySelector(`div.ground`).style.display =  `none`;
+            document.querySelector(`div.stick`).style.display = `none`;
+            document.querySelector(`div.hanger`).style.display = `none`;
+            document.querySelector(`div.rope`).style.display =`none`;
+            document.querySelector(`div.head`).style.display = `none`;
+            document.querySelector(`div.body`).style.display = `none`;
+            document.querySelector(`div.rArm`).style.display = `none`;
+            document.querySelector(`div.lArm`).style.display = `none`;
+            document.querySelector(`div.lFoot`).style.display = `none`;
+            document.querySelector(`div.rFoot`).style.display = `none`;
+            break;
         case 1:
             document.querySelector(`div.ground`).style.display = `block`;
             break;
@@ -86,7 +97,8 @@ function displayTheMan() {
             console.log(`Wrong, Game Over!`);
             break;
         default: 
-            console.log(`Guess a letter`);
+            console.log(`Game is Done!`);
+            resetGame();
     }
 }
 
@@ -106,7 +118,8 @@ function clickedLetter() {
                     alphabet[letter].style.boxShadow = `none`;
                     correctGuesses.push(pickedLetter);
                     if(correctGuesses.length == selectedWord.length) {
-                        alert(`You won!`);
+                        console.log(`You Won!`);
+                        return resetGame();
                     }
                 }
                 
@@ -122,7 +135,6 @@ function clickedLetter() {
 
                     wrongAnswerTally++;
                     displayTheMan();
-
                 }
             } 
         }); 
@@ -133,7 +145,18 @@ function resetGame() {
     incorrectGuesses = [];
     correctGuesses = [];
     wrongAnswerTally = 0;
-    selectedWord = pickWord();
+    selectedWord = wordChoice.pickWord();
+    for (let letter in alphabet) {
+        alphabet[letter].style.color = `black`; 
+        alphabet[letter].style.backgroundColor = `white`;
+        alphabet[letter].style.borderColor = `black`;
+        alphabet[letter].style.boxShadow = `2px 2px 2px black`;
+    }    
+    console.log(selectedWord);
+    document.getElementById(`underlines`).replaceChildren();
+    document.getElementById(`wrongLetters`).replaceChildren();
+    displayUnderlines();
+    displayTheMan();
 }
 
 playButton.addEventListener(`click`, function () {
