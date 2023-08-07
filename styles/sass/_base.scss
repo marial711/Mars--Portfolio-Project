@@ -1,6 +1,11 @@
 // This file includes variables, mixins, and utility classes needed for my project
+html {
+    scroll-behavior: smooth;
+}
 body {    
+    scroll-behavior: smooth;
     background-color: $primary-color;
+
     font: {
         family: 'Work Sans', sans-serif;
         size: 1rem;
