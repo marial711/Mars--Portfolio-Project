@@ -120,6 +120,7 @@ h1, h2, h3 {
     justify-content: space-around;
     flex-wrap: wrap;
     color: $text-color;
+    gap: 4rem;
 
     ul {
         display: flex;

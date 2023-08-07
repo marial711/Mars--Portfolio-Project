@@ -248,6 +248,7 @@ h1, h2, h3 {
   justify-content: space-around;
   flex-wrap: wrap;
   color: rgb(60, 63, 63);
+  gap: 4rem;
 }
 .skills-list ul {
   display: flex;
