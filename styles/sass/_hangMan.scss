@@ -1,11 +1,13 @@
 .the-game {
     display: none;
+    width: 500px;
     border: 5px solid $tertiary-color;
+    @media screen and (max-width: $mobile--breakpoint) {
+        width: 350px;
+    }
 }
 .the-man { 
     height: 350px;
-    justify-content: space-around;
-    align-items: center;
     position: relative;
     div {
         position: absolute;
@@ -17,75 +19,105 @@
     display: none;
     bottom: 50px;
     width: 200px;
-    right: 250px;
+    right: 150px;
+    @media screen and (max-width: $mobile--breakpoint) {
+        right: 60px;
+    }
 }
 
 .stick {
     display: none;
     height: 250px;
     bottom: 50px;
-    right: 250px;
+    right: 150px;
+    @media screen and (max-width: $mobile--breakpoint) {
+        right: 60px;
+    }
 }
 
 .hanger {
     display: none;
     top: 46px; 
-    right: 250px;
+    right: 150px;
     width: 100px;
+    @media screen and (max-width: $mobile--breakpoint) {
+        right: 60px;
+    }
 }
 
 .rope {
     display: none;
     height: 35px;
     top: 46px;
-    right: 350px;
+    right: 250px;
+    @media screen and (max-width: $mobile--breakpoint) {
+        right: 160px;
+    }
 }
 
 .head {
     display: none;
     z-index: 2;
     top: 80px;
-    right: 330px;
+    right: 230px;
     width: 40px;
     height: 40px;
     border-radius: 100%;
     background-color: white;
+    @media screen and (max-width: $mobile--breakpoint) {
+        right: 140px;
+    }
 }
 
 .body {
     display: none;
     top: 100px;
-    right: 350px;
+    right: 250px;
     height: 100px;
+    @media screen and (max-width: $mobile--breakpoint) {
+        right: 160px;
+    }
 }
 
 .lArm {
     display: none;
-    height: 40px;
+    height: 30px;
     top: 130px;
-    right: 335px;
+    right: 238px;
     transform: rotate(135deg);
+    @media screen and (max-width: $mobile--breakpoint) {
+        right: 149px;
+    }
 }
 .rArm {
     display: none;
-    height: 40px;
+    height: 30px;
     top: 130px;
-    left: 344px;
+    right: 262px;
     transform: rotate(45deg);
+    @media screen and (max-width: $mobile--breakpoint) {
+        right: 171px;
+    }
 }
 .rFoot {
     display: none;
     height: 30px;
-    top: 194px;
-    left: 350px;
+    top: 196px;
+    right: 262px;
     transform: rotate(45deg);
+    @media screen and (max-width: $mobile--breakpoint) {
+        right: 171px;
+    }
 }
 .lFoot {
     display: none;
     height: 30px;
-    top: 195px;
-    right: 338px;
+    top: 196px;
+    right: 238px;
     transform: rotate(135deg);
+    @media screen and (max-width: $mobile--breakpoint) {
+        right: 149px;
+    }
 }
 
 .keyboard {
@@ -104,6 +136,11 @@
             cursor: pointer;
             background-color: antiquewhite;
             box-shadow: none;
+        }
+    }
+    @media screen and (max-width: $mobile--breakpoint) {
+        div > div {
+            padding: 0.25rem;
         }
     }
 }

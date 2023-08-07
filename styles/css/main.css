@@ -16,41 +16,59 @@ header h1 {
   text-transform: uppercase;
   text-shadow: 3px 3px 3px #A09DAF;
 }
+@media screen and (max-width: 500px) {
+  header h1 {
+    font-size: 5rem;
+    letter-spacing: 1rem;
+    text-align: center;
+  }
+}
 header nav {
   background-color: white;
-  width: 100%;
-  padding: 2rem;
 }
 header nav > ul li > a {
   text-decoration: none;
   color: rgb(60, 63, 63);
   font-family: "Signika Negative", sans-serif;
-  font-size: 1.25rem;
+  font-size: 1.5rem;
   font-weight: 100;
 }
 header nav > ul li > a:hover, header nav > ul li > a :active {
   color: #AF9DA3;
   text-shadow: 1px 1px 2px grey;
-  font-size: 1.35rem;
+  font-size: 1.75rem;
 }
 
-h1, h2, h3, h4 {
+h1, h2 {
   color: rgb(60, 63, 63);
   font-size: 2.5rem;
   font-family: "Signika Negative", sans-serif;
   font-weight: 600;
 }
 
-li {
-  font-size: 1.25rem;
+h3, h4 {
+  color: rgb(60, 63, 63);
+  font-size: 1.5rem;
+  font-family: "Signika Negative", sans-serif;
+  font-weight: 600;
 }
 
 .about-section {
   border-bottom: solid 2px #DCE0FE;
+  line-height: 1.5;
   font-size: 1.25rem;
   font-weight: 200;
-  word-spacing: 4px;
-  line-height: 1.5;
+}
+@media screen and (max-width: 500px) {
+  .about-section {
+    line-height: 1.75;
+    font-size: 1.15rem;
+    font-weight: 100;
+  }
+  .about-section img {
+    height: 100%;
+    width: 80%;
+  }
 }
 
 .skills-section {
@@ -58,10 +76,13 @@ li {
 }
 
 .skills-list {
-  font-size: 1.25rem;
+  font-size: 1.15rem;
   font-weight: 200;
   word-spacing: 4px;
   line-height: 1;
+}
+.skills-list summary {
+  font-weight: 400;
 }
 .skills-list details > ul {
   padding-top: 1rem;
@@ -107,6 +128,11 @@ body {
   grid-template-columns: repeat(12, 1fr);
   margin: 0 32px;
 }
+@media screen and (max-width: 500px) {
+  body {
+    margin: 0;
+  }
+}
 
 header {
   min-height: 5%;
@@ -119,10 +145,28 @@ header {
   gap: 3rem;
   padding: 2rem 0;
 }
+@media screen and (max-width: 500px) {
+  header {
+    padding: 1rem 0;
+    gap: 1rem;
+  }
+}
+header nav {
+  grid-column: 1/13;
+  width: 100%;
+  padding: 1.5rem 0;
+}
 header nav > ul {
   display: flex;
-  justify-content: space-around;
+  justify-content: center;
   gap: 8rem;
+}
+@media screen and (max-width: 500px) {
+  header nav > ul {
+    padding: 0 1rem;
+    gap: 4rem;
+    justify-content: space-between;
+  }
 }
 
 main {
@@ -134,7 +178,12 @@ main {
   display: flex;
   flex-direction: column;
   align-items: center;
-  padding: 2rem;
+  padding: 2rem 1.25rem;
+}
+@media screen and (max-width: 768px) {
+  main {
+    padding: 1rem;
+  }
 }
 
 main > div {
@@ -159,31 +208,52 @@ h1, h2, h3 {
 .about-section {
   padding-bottom: 4rem;
   display: flex;
+  gap: 5rem;
   justify-content: space-around;
-  gap: 3rem;
   flex-direction: row;
   align-items: center;
+  flex-wrap: wrap;
 }
 .about-section p {
   text-indent: 10%;
   text-align: justify;
+  width: 40vw;
+}
+.about-section img {
+  border-radius: 50%;
+}
+@media screen and (max-width: 768px) {
+  .about-section {
+    flex-direction: column;
+    padding-bottom: 2rem;
+  }
+  .about-section p {
+    width: 80vw;
+  }
+}
+@media screen and (max-width: 500px) {
+  .about-section {
+    flex-direction: column;
+    flex-wrap: nowrap;
+  }
 }
 
 .skills-section {
   min-height: 50vh;
-  width: 100%;
-  padding: 1rem 0;
+  padding: 2rem 0;
 }
 
 .skills-list {
   display: flex;
   justify-content: space-around;
+  flex-wrap: wrap;
+  color: rgb(60, 63, 63);
 }
 .skills-list ul {
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: space-around;
+  justify-content: center;
   gap: 0.75rem;
 }
 @media screen and (max-width: 650px) {
@@ -191,6 +261,8 @@ h1, h2, h3 {
     flex-direction: column;
     gap: 3rem;
     width: 80vw;
+    flex-wrap: nowrap;
+    align-items: center;
   }
 }
 
@@ -211,7 +283,6 @@ h1, h2, h3 {
   padding: 16px;
 }
 .game-section section {
-  width: 100%;
   height: 10vh;
   display: flex;
   flex-direction: column;
@@ -219,12 +290,6 @@ h1, h2, h3 {
   justify-content: center;
   gap: 50px;
 }
-@media screen and (max-width: 650px) {
-  .game-section {
-    width: 400px;
-  }
-}
-
 .the-game {
   display: flex;
   flex-direction: column;
@@ -241,7 +306,15 @@ h1, h2, h3 {
 .keyboard div {
   display: flex;
   justify-content: space-around;
-  gap: 3rem;
+  gap: 1.5rem;
+  flex-wrap: wrap;
+}
+@media screen and (max-width: 500px) {
+  .keyboard div {
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 0.75rem;
+  }
 }
 
 .button {
@@ -268,13 +341,17 @@ h1, h2, h3 {
 
 .the-game {
   display: none;
+  width: 500px;
   border: 5px solid #A09DAF;
+}
+@media screen and (max-width: 500px) {
+  .the-game {
+    width: 350px;
+  }
 }
 
 .the-man {
   height: 350px;
-  justify-content: space-around;
-  align-items: center;
   position: relative;
 }
 .the-man div {
@@ -286,78 +363,128 @@ h1, h2, h3 {
   display: none;
   bottom: 50px;
   width: 200px;
-  right: 250px;
+  right: 150px;
+}
+@media screen and (max-width: 500px) {
+  .ground {
+    right: 60px;
+  }
 }
 
 .stick {
   display: none;
   height: 250px;
   bottom: 50px;
-  right: 250px;
+  right: 150px;
+}
+@media screen and (max-width: 500px) {
+  .stick {
+    right: 60px;
+  }
 }
 
 .hanger {
   display: none;
   top: 46px;
-  right: 250px;
+  right: 150px;
   width: 100px;
+}
+@media screen and (max-width: 500px) {
+  .hanger {
+    right: 60px;
+  }
 }
 
 .rope {
   display: none;
   height: 35px;
   top: 46px;
-  right: 350px;
+  right: 250px;
+}
+@media screen and (max-width: 500px) {
+  .rope {
+    right: 160px;
+  }
 }
 
 .head {
   display: none;
   z-index: 2;
   top: 80px;
-  right: 330px;
+  right: 230px;
   width: 40px;
   height: 40px;
   border-radius: 100%;
   background-color: white;
 }
+@media screen and (max-width: 500px) {
+  .head {
+    right: 140px;
+  }
+}
 
 .body {
   display: none;
   top: 100px;
-  right: 350px;
+  right: 250px;
   height: 100px;
+}
+@media screen and (max-width: 500px) {
+  .body {
+    right: 160px;
+  }
 }
 
 .lArm {
   display: none;
-  height: 40px;
+  height: 30px;
   top: 130px;
-  right: 335px;
+  right: 238px;
   transform: rotate(135deg);
+}
+@media screen and (max-width: 500px) {
+  .lArm {
+    right: 149px;
+  }
 }
 
 .rArm {
   display: none;
-  height: 40px;
+  height: 30px;
   top: 130px;
-  left: 344px;
+  right: 262px;
   transform: rotate(45deg);
+}
+@media screen and (max-width: 500px) {
+  .rArm {
+    right: 171px;
+  }
 }
 
 .rFoot {
   display: none;
   height: 30px;
-  top: 194px;
-  left: 350px;
+  top: 196px;
+  right: 262px;
   transform: rotate(45deg);
+}
+@media screen and (max-width: 500px) {
+  .rFoot {
+    right: 171px;
+  }
 }
 
 .lFoot {
   display: none;
   height: 30px;
-  top: 195px;
-  right: 338px;
+  top: 196px;
+  right: 238px;
   transform: rotate(135deg);
+}
+@media screen and (max-width: 500px) {
+  .lFoot {
+    right: 149px;
+  }
 }
 
 .keyboard {
@@ -377,6 +504,11 @@ h1, h2, h3 {
   cursor: pointer;
   background-color: antiquewhite;
   box-shadow: none;
+}
+@media screen and (max-width: 500px) {
+  .keyboard div > div {
+    padding: 0.25rem;
+  }
 }
 
 .wrong-letters {

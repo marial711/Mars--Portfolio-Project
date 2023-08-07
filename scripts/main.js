@@ -135,6 +135,7 @@ function clickedLetter() {
 
                     wrongAnswerTally++;
                     displayTheMan();
+                    // showHints();
                 }
             } 
         }); 
@@ -158,6 +159,12 @@ function resetGame() {
     displayUnderlines();
     displayTheMan();
 }
+
+// function showHints() {
+//     if(wrongAnswerTally === 3) {
+        
+//     }
+// }
 
 playButton.addEventListener(`click`, function () {
     const fullGame = document.getElementById(`theGame`);
